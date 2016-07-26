@@ -3,4 +3,8 @@ class RecordsController < ApplicationController
 	  @records = Record.all
 	  # render :index
 	end
+	def show
+	  @record = Record.find(params[:id])
+	  render :show #optional
+	end
 end
